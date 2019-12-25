@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no" />
+  <title>春节送好礼 温暖回家路</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/lib//Alloytouch.js" charset="utf-8"></script>
+  <script src="./js/lib/Pixi.min.js" charset="utf-8"></script>
+  <script src="./js/lib/TweenMax.min.js" charset="utf-8"></script>
+  <script src="./js/lib/TimelineMax.min.js" charset="utf-8"></script>
+  <script src="./js/lib/jquery-3.3.1.min.js" charset="utf-8"></script>
+</head>
+
+<body class="row">
+  <div id="loading" class="col">
+    <div class="loading-main">
+      <img src="./imgs/gift.png" class="gift" />
+    </div>
+    <div id="percent">
+      0%
+    </div>
+  </div>
+
+
+  <a href="#" id='rule-link' class="shu">活动规则</a>
+  <div class="col" id="form-panel">
+    <form class="col heng" id="form" method="post" action='/submit' onsubmit="return submitForm();">
+      <input id="name" class="input" required type="text" name="name" value="" placeholder="请输入您的姓名">
+      <input id="phone" class="input" required maxlength="11" minlength="11" type="tel" name="phone" value=""
+        placeholder="请输入您的手机号码">
+      <button class="btn" type="submit" name="button">提交信息 参与抽奖</button>
+      <div class="success">提交成功</div>
+    </form>
+  </div>
+
+
+  <div class="audio">
+    <audio preload='auto' src="./audio/bg.mp3" id="bg" loop="loop"></audio>
+    <audio preload='auto' src="./audio/talk_1.mp3" id="talk_1"></audio>
+    <audio preload='auto' src="./audio/talk_2.mp3" id="talk_2"></audio>
+    <audio preload='auto' src="./audio/wechat.wav" id="wechat"></audio>
+    <audio preload='auto' src="./audio/talk_5.mp3" id="talk_5"></audio>
+    <audio preload='auto' src="./audio/talk_6.mp3" id="talk_6"></audio>
+    <audio preload='auto' src="./audio/talk_7.mp3" id="talk_7"></audio>
+    <audio preload='auto' src="./audio/talk_8.mp3" id="talk_8"></audio>
+    <audio preload='auto' src="./audio/talk_9.mp3" id="talk_9"></audio>
+    <audio preload='auto' src="./audio/talk_10.mp3" id="talk_10"></audio>
+    <audio preload='auto' src="./audio/talk_11.mp3" id="talk_11"></audio>
+    <audio preload='auto' src="./audio/train.mp3" id="train"></audio>
+    <audio preload='auto' src="./audio/train1.mp3" id="train1"></audio>
+    <audio preload='auto' src="./audio/talk_12.mp3" id="talk_12"></audio>
+    <audio preload='auto' src="./audio/talk_13.mp3" id="talk_13"></audio>
+    <audio preload='auto' src="./audio/fireworks.mp3" id="fireworks"></audio>
+    <audio preload='auto' src="./audio/talk_14.mp3" id="talk_14"></audio>
+    <audio preload='auto' src="./audio/talk_15.mp3" id="talk_15"></audio>
+  </div>
+
+  <script type="text/javascript">
+    (function (doc, win) {
+      const docEl = doc.documentElement;
+      win.__clientW = docEl.clientWidth;
+      win.__clientH = docEl.clientHeight;
+
+      function setRootFontSize() {
+        const fontSize = (docEl.clientWidth * 150 / 1334).toFixed(3);
+        docEl.style.fontSize = fontSize + 'px';
+      }
+      doc.addEventListener('DOMContentLoaded', setRootFontSize, false);
+
+
+      if (win.__clientH > win.__clientW) {
+        doc.getElementById("form").className = "col rotate";
+        doc.getElementById("rule-link").className = "rotate";
+      }
+      // 横竖屏切换，重新加载
+      // window.location.reload()
+    })(document, window);
+  </script>
+</body>
+
+<script charset="utf-8" type="module">
+  import Main from './js/index.js'
+</script>
+
+</html>

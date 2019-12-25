@@ -1,0 +1,276 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #f9ecdc;
+}
+
+* {
+  padding: 0;
+  margin: 0
+}
+
+/* * {
+  overflow: scroll;
+} */
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg) scale(1.5);
+  color: #695969;
+}
+
+.loading-main {
+  width: 2.9rem;
+  height: 2.65rem;
+  background: url("../imgs/door.png");
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.gift {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  bottom: 0.24rem;
+  animation: loading 4s linear infinite;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#percent {
+  font-size: 0.32rem;
+}
+
+#form-panel {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+#form.rotate {
+  transform: rotate(90deg);
+  /*margin-left: -195px;*/
+}
+
+#rule-link.rotate {
+  transform: rotate(90deg);
+}
+
+#rule-link {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  font-size: 0.18rem;
+  width: 1.1rem;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  border-radius: 0.2rem;
+}
+
+.shu {
+  top: 14px;
+  right: 12px;
+}
+
+.input {
+  color: rgb(69, 69, 69);
+  background: #fff;
+  border: none;
+  width: 2.6rem;
+  height: 0.44rem;
+  padding-left: 0.26rem;
+  font-size: 0.18rem;
+  margin-bottom: 0.14rem;
+  border-radius: 0.36rem;
+}
+
+.btn {
+  background: #e2a924;
+  color: rgb(116, 49, 40);
+  font-size: 0.19rem;
+  width: 2.3rem;
+  border-radius: 0.28rem;
+  height: 0.54rem;
+  line-height: 0.54rem;
+  border: none;
+  margin-top: 0.05rem;
+  font-weight: bold;
+}
+
+@media screen and (orientation: portrait) {
+
+  #rule-link {
+    font-size: 0.34rem;
+    width: 2.2rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    border-radius: 0.45rem;
+    right: -0.4rem;
+    bottom: 1.1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  #form-panel {
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+  }
+
+  .input {
+    width: 5.6rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    font-size: 0.32rem;
+    margin-bottom: 0.26rem;
+    padding-left: 0.48rem;
+    border-radius: 0.5rem;
+  }
+
+  .btn {
+    height: 1rem;
+    font-size: 0.34rem;
+    width: 4.2rem;
+    border-radius: 0.8rem;
+  }
+
+  #form {
+    padding-top: 1.2rem;
+  }
+}
+
+.success {
+  color: #fff;
+  font-size: 0.36rem;
+  background: rgba(0, 0, 0, 0.5);
+  width: 4.2rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  font-weight: bold;
+  display: none;
+}
+
+@media screen and (orientation: landscape) {
+
+  /*横屏 css*/
+  #loading {
+    transform: rotate(0deg) scale(1.5);
+  }
+
+  #form.heng {
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding-bottom: 0.28rem;
+  }
+
+  .input {
+    font-size: 0.22rem;
+    height: 0.56rem;
+    line-height: 0.56rem;
+    width: 3.2rem;
+  }
+
+  .btn {
+    font-size: 0.24rem;
+    width: 2.8rem;
+    height: 0.56rem;
+    line-height: 0.56rem;
+  }
+}
+
+@keyframes loading {
+  from {
+    left: 0rem
+  }
+
+  7.142857142857143% {
+    left: 0.16rem
+  }
+
+  14.285714285714286% {
+    left: 0.32rem
+  }
+
+  21.42857142857143% {
+    left: 0.48rem
+  }
+
+  28.571428571428573% {
+    left: 0.54rem
+  }
+
+  35.714285714285715% {
+    left: 0.7rem
+  }
+
+  42.85714285714286% {
+    left: 0.86rem
+  }
+
+  50% {
+    left: 0.93rem
+  }
+
+  57.142857142857146% {
+    left: 1.09rem
+  }
+
+  64.28571428571429% {
+    left: 1.25rem
+  }
+
+  71.42857142857143% {
+    left: 1.31rem
+  }
+
+  78.57142857142857% {
+    left: 1.47rem
+  }
+
+  85.71428571428572% {
+    left: 1.63rem
+  }
+
+  92.85714285714286% {
+    left: 2.3rem
+  }
+
+  /* 100%{left: 3rem;} */
+}
